@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @userss.id %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @userss.email %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @userss.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @userss.last_name %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @userss.company_id %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @userss.role_id %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @userss.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @userss.end_date %>
+</p>
+
+<p>
+  <strong>Monthly charge:</strong>
+  <%= @userss.monthly_charge %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @userss.notes %>
+</p>
+
+<p>
+  <strong>Blob:</strong>
+  <%= @userss.blob %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @userss.image_id %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @userss.active %>
+</p>
+
+<%= link_to 'Edit', edit_userss_path(@userss) %> |
+<%= link_to 'Back', usersses_path %>

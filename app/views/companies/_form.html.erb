@@ -1,0 +1,60 @@
+<%= form_with(model: company, local: true) do |form| %>
+  <% if company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+      <% company.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <table border="2px" bgcolor="#CDD6D5" width="20%" height="250px" align="center">
+  <tr>
+    <td>
+  <div class="field">
+    <%= form.label :Name %>
+    <%= form.text_field :Name %>
+  </div>
+
+ 
+  <div class="field">
+    <%= form.label :Country %>
+    <%= form.text_field :Country %>
+  </div>
+</h3>
+  <div class="field">
+    <%= form.label :State %>
+    <%= form.text_field :State %>
+  </div>
+
+  <div class="field">
+    <%= form.label :City %>
+    <%= form.text_field :City %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Postcode %>
+    <%= form.number_field :Postcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Startdate %>
+    <%= form.date_select :Startdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Active %>
+    <%= form.text_field :Active %>
+  </div>
+</td>
+</tr>
+</table>
+</br>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>
+
