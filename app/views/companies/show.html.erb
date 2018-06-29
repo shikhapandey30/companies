@@ -1,23 +1,25 @@
 <p id="notice"><%= notice %></p>
-
+<table border="2px" bgcolor=" #d2b4de" width="20%" height="200px">
+  <tr>
+    <td>
 <p>
   <strong>Name:</strong>
   <%= @company.Name %>
 </p>
 
 <p>
-  <strong>Country:</strong>
-  <%= @company.Country %>
+  <strong>Country ID:</strong>
+  <%= @company.Country_id %>
 </p>
 
 <p>
-  <strong>State:</strong>
-  <%= @company.State %>
+  <strong>State ID:</strong>
+  <%= @company.State_id %>
 </p>
 
 <p>
-  <strong>City:</strong>
-  <%= @company.City %>
+  <strong>City ID:</strong>
+  <%= @company.City_id %>
 </p>
 
 <p>
@@ -27,13 +29,16 @@
 
 <p>
   <strong>Startdate:</strong>
-  <%= @company.Startdate %>
+  <%= @company.Start_date %>
 </p>
 
 <p>
   <strong>Active:</strong>
   <%= @company.Active %>
 </p>
+</td>
+</tr>
+</table>
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>

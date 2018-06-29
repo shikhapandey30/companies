@@ -14,8 +14,11 @@
 
 <div id="user_nav">
   <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>. Not you?
+    Signed in as <table border="2px" bgcolor=""><tr><td><h3><%= current_user.firstname %></br> </br><%= current_user.lastname %></br> </br><%= current_user.company_id %></br></br> <%= current_user.role_id %> </br></br><%= current_user.startdate %></br> </br><%= current_user.enddate %></br></br> <%= current_user.monthlycharge %> </br></br><%= current_user.notesblob %></br> </br><%= current_user.image_id %></br></br> <%= current_user.active %></h3><%= current_user.email %>. Not you?
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  </td>
+</tr>
+</table>
   <% else %>
     <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
   <% end %>

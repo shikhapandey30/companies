@@ -10,18 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_28_122309) do
+ActiveRecord::Schema.define(version: 2018_06_29_124732) do
+
+  create_table "as", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string "Name"
-    t.string "Country"
-    t.string "State"
-    t.string "City"
+    t.integer "Country_id"
+    t.integer "State_id"
+    t.integer "City_id"
     t.integer "Postcode"
-    t.date "Startdate"
-    t.string "Active"
+    t.datetime "Start_date"
+    t.boolean "Active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "user_roles", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "rolename"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,6 +48,16 @@ ActiveRecord::Schema.define(version: 2018_06_28_122309) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "firstname"
+    t.string "lastname"
+    t.integer "company_id"
+    t.integer "role_id"
+    t.datetime "startdate"
+    t.datetime "enddate"
+    t.decimal "monthlycharge"
+    t.text "notesblob"
+    t.string "image_id"
+    t.boolean "active"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

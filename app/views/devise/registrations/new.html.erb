@@ -1,7 +1,49 @@
-<h2>Sign up</h2>
-
+<h2 align="center">Sign up</h2>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+  <table border="2px" align="center" bgcolor="#d2b4de">
+  <tr>
+  <td> 
+  <div class="field">
+    <%= f.label :firstname %>
+    <%= f.text_field :firstname %>
+
+    <div class="field">
+    <%= f.label :lastname %>
+    <%= f.text_field :lastname %>
+
+
+    <div class="field">
+    <%= f.label :companyid %>
+    <%= f.number_field :company_id %>
+
+    <div class="field">
+    <%= f.label :roleid %>
+    <%= f.number_field :role_id %>
+
+    <div class="field">
+    <%= f.label :startdate %>
+    <%= f.datetime_select :startdate %>
+
+    <div class="field">
+    <%= f.label :enddate %>
+    <%= f.datetime_select :enddate %>
+
+    <div class="field">
+    <%= f.label :monthlycharge %>
+    <%= f.number_field :monthlycharge %>
+
+    <div class="field">
+    <%= f.label :notesblob %>
+    <%= f.text_field :notesblob %>
+
+    <div class="field">
+    <%= f.label :imageid %>
+    <%= f.text_field :image_id %>
+
+    <div class="field">
+    <%= f.label :active %>
+    <%= f.check_box :active %>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -24,6 +66,10 @@
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+  </td>
+  </tr>
+  </table>
 <% end %>
+
 
 <%= render "devise/shared/links" %>

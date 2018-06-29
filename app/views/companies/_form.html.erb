@@ -20,18 +20,18 @@
 
  
   <div class="field">
-    <%= form.label :Country %>
-    <%= form.text_field :Country %>
-  </div>
-</h3>
-  <div class="field">
-    <%= form.label :State %>
-    <%= form.text_field :State %>
+    <%= form.label :Countryid %>
+    <%= form.number_field :Country_id %>
   </div>
 
   <div class="field">
-    <%= form.label :City %>
-    <%= form.text_field :City %>
+    <%= form.label :Stateid %>
+    <%= form.number_field :State_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cityid %>
+    <%= form.number_field :City_id %>
   </div>
 
   <div class="field">
@@ -41,12 +41,12 @@
 
   <div class="field">
     <%= form.label :Startdate %>
-    <%= form.date_select :Startdate %>
+    <%= form.datetime_select :Start_date %>
   </div>
 
   <div class="field">
     <%= form.label :Active %>
-    <%= form.text_field :Active %>
+    <%= form.check_box :Active %>
   </div>
 </td>
 </tr>
