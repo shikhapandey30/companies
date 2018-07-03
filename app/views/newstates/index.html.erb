@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Newstates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Statename</th>
+      <th>Country</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @newstates.each do |newstate| %>
+      <tr>
+        <td><%= newstate.statename %></td>
+        <td><%= newstate.country %></td>
+        <td><%= link_to 'Show', newstate %></td>
+        <td><%= link_to 'Edit', edit_newstate_path(newstate) %></td>
+        <td><%= link_to 'Destroy', newstate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Newstate', new_newstate_path %>

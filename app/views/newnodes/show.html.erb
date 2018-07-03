@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nodename:</strong>
+  <%= @newnode.nodename %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @newnode.place %>
+</p>
+
+<%= link_to 'Edit', edit_newnode_path(@newnode) %> |
+<%= link_to 'Back', newnodes_path %>

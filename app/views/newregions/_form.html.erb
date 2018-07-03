@@ -1,0 +1,22 @@
+<%= form_with(model: newregion, local: true) do |form| %>
+  <% if newregion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(newregion.errors.count, "error") %> prohibited this newregion from being saved:</h2>
+
+      <ul>
+      <% newregion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :regionname %>
+    <%= form.text_field :regionname %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

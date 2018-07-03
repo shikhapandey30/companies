@@ -1,0 +1,2 @@
+class Newregion < ApplicationRecord
+end

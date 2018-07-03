@@ -1,0 +1,2 @@
+class Newnode < ApplicationRecord
+end

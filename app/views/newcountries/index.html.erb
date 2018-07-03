@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Newcountries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Countryname</th>
+      <th>Code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @newcountries.each do |newcountry| %>
+      <tr>
+        <td><%= newcountry.countryname %></td>
+        <td><%= newcountry.code %></td>
+        <td><%= link_to 'Show', newcountry %></td>
+        <td><%= link_to 'Edit', edit_newcountry_path(newcountry) %></td>
+        <td><%= link_to 'Destroy', newcountry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Newcountry', new_newcountry_path %>

@@ -1,0 +1,37 @@
+<%= form_with(model: newplace, local: true) do |form| %>
+  <% if newplace.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(newplace.errors.count, "error") %> prohibited this newplace from being saved:</h2>
+
+      <ul>
+      <% newplace.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nodename %>
+    <%= form.text_field :nodename %>
+  </div>
+
+  <div class="field">
+    <%= form.label :placename %>
+    <%= form.text_field :placename %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nodename %>
+    <%= form.text_field :nodename %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company %>
+    <%= form.text_field :company %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

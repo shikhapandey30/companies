@@ -16,6 +16,9 @@ class CompaniesController < ApplicationController
     @company = Company.new
   end
 
+  def location
+  end
+
   def edit
   end
 
@@ -54,6 +57,9 @@ class CompaniesController < ApplicationController
       format.html { redirect_to companies_url, notice: 'Company was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def location
   end
 
   private

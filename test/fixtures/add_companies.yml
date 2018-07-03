@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company: MyString
+  country: MyString
+  state: MyString
+  city: MyString
+  postcode: 1
+  startdate: 2018-07-03 15:56:05
+  active: false
+
+two:
+  company: MyString
+  country: MyString
+  state: MyString
+  city: MyString
+  postcode: 1
+  startdate: 2018-07-03 15:56:05
+  active: false

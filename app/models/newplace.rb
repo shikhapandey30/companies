@@ -1,0 +1,2 @@
+class Newplace < ApplicationRecord
+end

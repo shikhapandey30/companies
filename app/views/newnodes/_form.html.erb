@@ -1,0 +1,27 @@
+<%= form_with(model: newnode, local: true) do |form| %>
+  <% if newnode.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(newnode.errors.count, "error") %> prohibited this newnode from being saved:</h2>
+
+      <ul>
+      <% newnode.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nodename %>
+    <%= form.text_field :nodename %>
+  </div>
+
+  <div class="field">
+    <%= form.label :place %>
+    <%= form.text_field :place %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

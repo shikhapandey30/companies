@@ -1,0 +1,2 @@
+class Newcountry < ApplicationRecord
+end

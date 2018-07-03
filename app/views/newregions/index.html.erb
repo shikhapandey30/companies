@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Newregions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Regionname</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @newregions.each do |newregion| %>
+      <tr>
+        <td><%= newregion.regionname %></td>
+        <td><%= link_to 'Show', newregion %></td>
+        <td><%= link_to 'Edit', edit_newregion_path(newregion) %></td>
+        <td><%= link_to 'Destroy', newregion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Newregion', new_newregion_path %>

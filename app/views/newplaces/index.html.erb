@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Newplaces</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nodename</th>
+      <th>Placename</th>
+      <th>Nodename</th>
+      <th>Company</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @newplaces.each do |newplace| %>
+      <tr>
+        <td><%= newplace.nodename %></td>
+        <td><%= newplace.placename %></td>
+        <td><%= newplace.nodename %></td>
+        <td><%= newplace.company %></td>
+        <td><%= link_to 'Show', newplace %></td>
+        <td><%= link_to 'Edit', edit_newplace_path(newplace) %></td>
+        <td><%= link_to 'Destroy', newplace, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Newplace', new_newplace_path %>

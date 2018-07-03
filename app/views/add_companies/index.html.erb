@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Add Companies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Country</th>
+      <th>State</th>
+      <th>City</th>
+      <th>Postcode</th>
+      <th>Startdate</th>
+      <th>Active</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @add_companies.each do |add_company| %>
+      <tr>
+        <td><%= add_company.company %></td>
+        <td><%= add_company.country %></td>
+        <td><%= add_company.state %></td>
+        <td><%= add_company.city %></td>
+        <td><%= add_company.postcode %></td>
+        <td><%= add_company.startdate %></td>
+        <td><%= add_company.active %></td>
+        <td><%= link_to 'Show', add_company %></td>
+        <td><%= link_to 'Edit', edit_add_company_path(add_company) %></td>
+        <td><%= link_to 'Destroy', add_company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Add Company', new_add_company_path %>

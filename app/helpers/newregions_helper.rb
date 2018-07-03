@@ -1,0 +1,2 @@
+module NewregionsHelper
+end
