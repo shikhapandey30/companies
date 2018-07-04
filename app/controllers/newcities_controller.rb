@@ -1,28 +1,26 @@
 class NewcitiesController < ApplicationController
   before_action :set_newcity, only: [:show, :edit, :update, :destroy]
 
-  # GET /newcities
-  # GET /newcities.json
+  
+  
   def index
     @newcities = Newcity.all
   end
 
-  # GET /newcities/1
-  # GET /newcities/1.json
+  
   def show
   end
 
-  # GET /newcities/new
+ 
   def new
     @newcity = Newcity.new
   end
 
-  # GET /newcities/1/edit
+  
   def edit
   end
 
-  # POST /newcities
-  # POST /newcities.json
+  
   def create
     @newcity = Newcity.new(newcity_params)
 
@@ -37,8 +35,7 @@ class NewcitiesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /newcities/1
-  # PATCH/PUT /newcities/1.json
+ 
   def update
     respond_to do |format|
       if @newcity.update(newcity_params)
@@ -51,8 +48,7 @@ class NewcitiesController < ApplicationController
     end
   end
 
-  # DELETE /newcities/1
-  # DELETE /newcities/1.json
+  
   def destroy
     @newcity.destroy
     respond_to do |format|
@@ -62,12 +58,10 @@ class NewcitiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_newcity
       @newcity = Newcity.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def newcity_params
       params.require(:newcity).permit(:cityname, :state)
     end

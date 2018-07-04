@@ -9,17 +9,18 @@
 
 <p>
   <strong>Country ID:</strong>
-  <%= @company.Country_id %>
+  <%= Country.find(@company.Country_id).country_name %>
+
 </p>
 
 <p>
   <strong>State ID:</strong>
-  <%= @company.State_id %>
+  <%= State.find(@company.State_id).state_name %>
 </p>
 
 <p>
   <strong>City ID:</strong>
-  <%= @company.City_id %>
+  <%= City.find(@company.City_id).city_name %>
 </p>
 
 <p>

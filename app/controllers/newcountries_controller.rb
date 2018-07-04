@@ -1,28 +1,24 @@
 class NewcountriesController < ApplicationController
   before_action :set_newcountry, only: [:show, :edit, :update, :destroy]
 
-  # GET /newcountries
-  # GET /newcountries.json
+  
   def index
     @newcountries = Newcountry.all
   end
 
-  # GET /newcountries/1
-  # GET /newcountries/1.json
+  
   def show
   end
 
-  # GET /newcountries/new
+  
   def new
     @newcountry = Newcountry.new
   end
 
-  # GET /newcountries/1/edit
   def edit
   end
 
-  # POST /newcountries
-  # POST /newcountries.json
+  
   def create
     @newcountry = Newcountry.new(newcountry_params)
 
@@ -37,8 +33,7 @@ class NewcountriesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /newcountries/1
-  # PATCH/PUT /newcountries/1.json
+  
   def update
     respond_to do |format|
       if @newcountry.update(newcountry_params)
@@ -51,8 +46,7 @@ class NewcountriesController < ApplicationController
     end
   end
 
-  # DELETE /newcountries/1
-  # DELETE /newcountries/1.json
+  
   def destroy
     @newcountry.destroy
     respond_to do |format|
@@ -62,12 +56,10 @@ class NewcountriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_newcountry
       @newcountry = Newcountry.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def newcountry_params
       params.require(:newcountry).permit(:countryname, :code)
     end

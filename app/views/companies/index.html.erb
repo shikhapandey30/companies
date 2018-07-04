@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-<
 <h1 align="center">Companies</h1>
 <table border="2px" bgcolor="#CDD6D5" width="100%" height="250px" align="center">
   <thead>
@@ -18,9 +17,15 @@
     <% @companies.each do |company| %>
       <tr>
         <td><%= company.Name %></td>
-        <td><%= company.Country_id %></td>
-        <td><%= company.State_id %></td>
-        <td><%= company.City_id %></td>
+        <td><%= company.Country_id %>
+            <%= Country.find(company.Country_id).country_name %></td>
+         <td><%= company.State_id %>
+             <%= State.find(company.State_id).state_name %>
+
+         </td>
+        <td><%= company.City_id %>
+          <%= City.find(company.City_id).city_name %></td>
+
         <td><%= company.Postcode %></td>
         <td><%= company.Start_date %></td>
         <td><%= company.Active %>

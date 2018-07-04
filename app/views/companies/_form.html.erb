@@ -21,17 +21,17 @@
  
   <div class="field">
     <%= form.label :Countryid %>
-    <%= form.number_field :Country_id %>
+    <%= form.select(:Country_id, Country.all.collect {|u| [u.country_name, u.id]}, :prompt => 'Select') %>
   </div>
 
   <div class="field">
     <%= form.label :Stateid %>
-    <%= form.number_field :State_id %>
+    <%= form.select(:State_id, State.all.collect {|u| [u.state_name, u.id]}, :prompt => 'Select') %>
   </div>
 
   <div class="field">
     <%= form.label :Cityid %>
-    <%= form.number_field :City_id %>
+    <%= form.select(:City_id, City.all.collect {|u| [u.city_name, u.id]}, :prompt => 'Select') %>
   </div>
 
   <div class="field">
