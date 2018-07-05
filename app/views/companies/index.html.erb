@@ -17,7 +17,7 @@
     <% @companies.each do |company| %>
       <tr>
         <td><%= company.Name %></td>
-        <td><%= company.Country_id %>
+        <td><%= company.try(:Country_id) %>
             <%= Country.find(company.Country_id).country_name %></td>
          <td><%= company.State_id %>
              <%= State.find(company.State_id).state_name %>
