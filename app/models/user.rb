@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   rolify
   rolify :before_add => :before_add_method
+
+  mount_uploader :image_id, ImageUploader
+  
   belongs_to :company
   def before_add_method(role)
     # do something before it gets added
@@ -12,6 +15,6 @@ class User < ApplicationRecord
   end
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, 
+  devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 end

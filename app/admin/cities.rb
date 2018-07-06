@@ -1,8 +1,8 @@
-ActiveAdmin.register State do
+ActiveAdmin.register City do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
- permit_params :list, :of, :attributes, :on, :state_id, :state_name
+permit_params :list, :of, :attributes, :on, :city_id, :city_name
 #
 # or
 #

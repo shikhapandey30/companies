@@ -69,6 +69,19 @@ body  {
     background-color: #cccccc;
 }
 </style>
+
+<style>
+.footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 90px;
+   background-color: #e34d44;
+   color: white;
+   text-align: center;
+}
+</style>
+
 </head>
 <body>
 
@@ -93,9 +106,22 @@ body  {
 <div style="padding-left:20px">
 </div>
 <div id="user_nav">
+
   <% if user_signed_in? %>
   <table border="2px" align="center" bgcolor="#cc99ff"><tr><td>
-    Signed in as </td></tr> </table></br><table border="2px" bgcolor="#cc99ff" align="center" width="25%" height="200px"><tr><td><h3> Firstname :------------------ &nbsp;&nbsp;&nbsp;<%= current_user.firstname %></h3> </br><h3>lastname : ------------------&nbsp;&nbsp;&nbsp; <%= current_user.lastname %></h3> </br> <h3>company id  : ----------------&nbsp;&nbsp;&nbsp;<%= current_user.try(:company).try(:Name) %></h3></br> <h3>role id :----------------------- &nbsp;&nbsp;&nbsp;<%= current_user.role_id %> </h3></br></br><h3>startdate : ------------------&nbsp;&nbsp;&nbsp;<%= current_user.startdate %></h3> </br><h3>enddate : ------------------&nbsp;&nbsp;&nbsp;<%= current_user.enddate %></h3></br> <h3>monthlycharge : ------------------&nbsp;&nbsp;&nbsp;<%= current_user.monthlycharge %></h3> </br><h3>notesblob :------------------ &nbsp;&nbsp;&nbsp;<%= current_user.notesblob %></h3></br><h3>image id----------------------<%= current_user.image_id %></h3></br><h3>active :------------------------------- &nbsp;&nbsp;&nbsp;<%= current_user.active %></h3>  </td>
+    Signed in as </td></tr> </table></br><table border="2px" bgcolor="#cc99ff" align="center" width="25%" height="200px">
+      <tr>
+        <td>
+          <h3> Firstname :------------------ &nbsp;&nbsp;&nbsp;<%= current_user.firstname %></h3>
+           </br><h3>lastname : ------------------&nbsp;&nbsp;&nbsp; <%= current_user.lastname %></h3>
+            </br> <h3>company id  : ----------------&nbsp;&nbsp;&nbsp;<%= current_user.try(:company).try(:Name) %></h3>
+          </br> <h3>role id :----------------------- &nbsp;&nbsp;&nbsp;<%= current_user.role_id %> </h3>
+        </br></br><h3>startdate : ------------------&nbsp;&nbsp;&nbsp;<%= current_user.startdate %></h3> 
+      </br><h3>enddate : ------------------&nbsp;&nbsp;&nbsp;<%= current_user.enddate %></h3>
+    </br> <h3>monthlycharge : ------------------&nbsp;&nbsp;&nbsp;<%= current_user.monthlycharge %></h3>
+     </br><h3>notesblob :------------------ &nbsp;&nbsp;&nbsp;<%= current_user.notesblob %></h3>
+   </br><h3>image id----------------------<%= image_tag(current_user.image_id.url) %></h3>
+ </br><h3>active :------------------------------- &nbsp;&nbsp;&nbsp;<%= current_user.active %></h3>  </td>
 </tr>
 </table>
 </br>
@@ -104,15 +130,24 @@ body  {
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
  
   <% else %>
-    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+    <%= link_to "Sign up", new_user_registration_path %> or
+     <%= link_to "sign in", new_user_session_path %>
   <% end %>
 </h3>
-</td>
+ </td>
 
 
 </tr>
 </table>
 </div>
+
+
+
 <%= yield %>
+
+
+<div class="footer">
+  <h1>BTPL</h1>
+</div>
   </body>
 </html>

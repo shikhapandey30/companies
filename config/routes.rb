@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
   resources :countries
   resources :add_companies
@@ -8,10 +9,9 @@ Rails.application.routes.draw do
   resources :newcountries
   resources :newstates
   resources :newcities
-  devise_for :users
   ActiveAdmin.routes(self)
   resources :companies
-  devise_for :newcity
+  #devise_for :newcity
   get 'companies/index'
   get 'add_companies/index'
 	root 'companies#index'
