@@ -1,8 +1,8 @@
 <h2 align="center">Sign up</h2>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-  <table border="2px" align="center" bgcolor="#d2b4de">
-  <tr>
+<table border="2" align="center" style="background: linear-gradient(to bottom, #33ccff 0%,
+#ff99cc 100%)">  <tr>
   <td> 
   <div class="field">
     <%= f.label :firstname %>
@@ -72,5 +72,10 @@
   </table>
 <% end %>
 
-
+<script>
+  $( function() {
+    $("#startdate" ).datetimepicker({ format: 'DD-MM-YYYY'});
+    $("#enddate" ).datetimepicker({ format: 'DD-MM-YYYY'});
+  } );
+  </script>
 <%= render "devise/shared/links" %>

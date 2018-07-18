@@ -18,7 +18,6 @@ class CountriesController < ApplicationController
   def edit
   end
 
-  
   def create
     @country = Country.new(country_params)
 

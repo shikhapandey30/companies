@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <h1 align="center">Companies</h1>
-<table border="2px" bgcolor="#CDD6D5" width="100%" height="250px" align="center">
+<table border="2px" bgcolor="#33b5e5" width="100%" height="250px" align="center">
   <thead>
     <tr>
       <th>Name</th>
@@ -13,7 +13,7 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-  <tbody bgcolor="yellow">
+  <tbody bgcolor="#f8bbd0">
     <% @companies.each do |company| %>
       <tr>
         <td><%= company.Name %></td>
@@ -38,4 +38,10 @@
   </tbody>
 </table>
 <br>
+<table border="2px" bgcolor="#ce93d8" align="center">
+<tr>
+  <td>
 <%= link_to 'New Company', new_company_path %>
+</td>
+</tr>
+</table>
